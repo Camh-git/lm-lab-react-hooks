@@ -10,11 +10,11 @@ In the `CountCats.tsx` file there is a component called `CountCats`.
 
 This component is supposed to:
 
--   Render a button on the screen
+- Render a button on the screen
 
--   When a user clicks the button, an extra cat should appear! 🐈
+- When a user clicks the button, an extra cat should appear! 🐈
 
--   The button should also display the number of cats
+- The button should also display the number of cats
 
 You mission is to implement this functionality... using `useState`
 
@@ -22,9 +22,9 @@ You mission is to implement this functionality... using `useState`
 
 If you have implemented `useState` correctly, you should:
 
--   See an extra cat on the screen every time you click the button
+- See an extra cat on the screen every time you click the button
 
--   The button should display how many cats there are
+- The button should display how many cats there are
 
 - You should have a function called (something like) `incrementCats`
 
@@ -36,10 +36,10 @@ Use the React documentation to help you: https://react.dev/reference/react/useSt
 
 ## Food For Thought
 
--   What is the useState hook for?
+- What is the useState hook for? updating state
 
--   What does does useState return?
+- What does does useState return? void
 
--   Should you call useState inside loops or if/else statements?
+- Should you call useState inside loops or if/else statements? no
 
--   How many times will React call your initializer function in Strict Mode?
+- How many times will React call your initializer function in Strict Mode? twice in dev, once in production
