@@ -19,9 +19,7 @@ export const APICall = () => {
         "https://jsonplaceholder.typicode.com/todos/1"
       );
       result.json().then((json) => {
-        console.log(json);
         setData(json);
-        console.log(data);
       });
     };
     list();
