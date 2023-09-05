@@ -14,7 +14,7 @@ export const Todo = () => {
   const url = "https://jsonplaceholder.typicode.com/todos/1";
   const [data, isFetching] = useFetchData(url);
   //console.log("fetching:" + isFetching);
-  console.log(data);
+  //console.log(data);
   return (
     <>
       <h2>Custom Hook</h2>
