@@ -2,20 +2,12 @@ import { useState, createContext, useContext } from "react";
 import { Child1 } from "./child_1";
 import { Child2 } from "./child_2";
 
-const dark = false;
 interface theme {
   backgroundColor: string;
   color: string;
   padding: string;
   margin: string;
 }
-
-export const ThemeContext = createContext<theme>({
-  backgroundColor: dark ? "#333" : "#CCC",
-  color: dark ? "white" : "#333",
-  padding: "2rem",
-  margin: "2rem",
-});
 
 export const Parent = () => {
   const [darkTheme, setDarkTheme] = useState(true);
@@ -24,8 +16,8 @@ export const Parent = () => {
     setDarkTheme((prevDarkTheme) => !prevDarkTheme);
   };
   const ThemeContext = createContext<theme>({
-    backgroundColor: dark ? "#333" : "#CCC",
-    color: dark ? "white" : "#333",
+    backgroundColor: darkTheme ? "#333" : "#CCC",
+    color: darkTheme ? "white" : "#333",
     padding: "2rem",
     margin: "2rem",
   });
