@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { currentTheme } from "./themeObject";
 
 export const Child1: React.FC = () => {
   //const dark = useContext(currentTheme);
