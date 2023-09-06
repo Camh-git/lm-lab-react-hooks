@@ -5,7 +5,6 @@ export const Child2: React.FC<{ dark: boolean }> = ({ dark }) => {
     padding: "2rem",
     margin: "2rem",
   };
-  //const theme: <theme> = useContext{themeContext}
 
   return <div style={theme}>Child 2</div>;
 };
