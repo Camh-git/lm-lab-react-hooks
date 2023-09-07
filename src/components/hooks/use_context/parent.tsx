@@ -1,34 +1,29 @@
-import { useState, createContext } from "react";
+import { useState } from "react";
 import { Child1 } from "./child_1";
 import { Child2 } from "./child_2";
-import { ThemeContext } from "./themeObject";
+import { theme, defaultTheme, ThemeContext } from "./themeObject";
 
 export const Parent = () => {
   const [darkTheme, setDarkTheme] = useState(true);
 
-  const [currentTheme, setCurrentTheme] = useState({
-    backgroundColor: darkTheme ? "#333" : "#CCC",
-    color: darkTheme ? "white" : "#333",
-    padding: "2rem",
-    margin: "2rem",
-  });
+  const [currentTheme, setCurrentTheme] = useState(defaultTheme);
 
   const toggleTheme = () => {
     setDarkTheme((prevDarkTheme) => !prevDarkTheme);
     setCurrentTheme(() => {
-      const newTheme = {
-        backgroundColor: "white",
-        color: "black",
+      const newColours = () => {
+        if (darkTheme === true) {
+          return ["#333", "white"];
+        } else {
+          return ["#ccc", "#333"];
+        }
+      };
+      const newTheme: theme = {
+        backgroundColor: newColours()[0],
+        color: newColours()[1],
         padding: currentTheme.padding,
         margin: currentTheme.margin,
       };
-      if (darkTheme === true) {
-        newTheme.backgroundColor = "#ccc";
-        newTheme.color = "#333";
-      } else {
-        newTheme.backgroundColor = "#333";
-        newTheme.color = "white";
-      }
       return newTheme;
     });
   };

@@ -6,7 +6,7 @@ export interface theme {
   margin: string;
 }
 const darkTheme = false;
-const defaultTheme: theme = {
+export const defaultTheme: theme = {
   backgroundColor: darkTheme ? "#333" : "#CCC",
   color: darkTheme ? "white" : "#333",
   padding: "2rem",
