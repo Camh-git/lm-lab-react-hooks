@@ -1,8 +1,10 @@
+import { useContext, createContext } from "react";
 export interface theme {
   backgroundColor: string;
   color: string;
   padding: string;
   margin: string;
+  darkMode: boolean;
 }
 const darkTheme = false;
 export const currentTheme: theme = {
@@ -10,4 +12,6 @@ export const currentTheme: theme = {
   color: darkTheme ? "white" : "#333",
   padding: "2rem",
   margin: "2rem",
+  darkMode: false,
 };
+export const ThemeContext = createContext<theme>(currentTheme);

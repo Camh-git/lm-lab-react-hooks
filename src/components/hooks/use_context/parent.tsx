@@ -1,16 +1,16 @@
 import { useState, createContext } from "react";
 import { Child1 } from "./child_1";
 import { Child2 } from "./child_2";
-import { currentTheme, theme } from "./themeObject";
+import { currentTheme, ThemeContext } from "./themeObject";
 
 export const Parent = () => {
   const [darkTheme, setDarkTheme] = useState(true);
 
   const toggleTheme = () => {
     setDarkTheme((prevDarkTheme) => !prevDarkTheme);
+    console.log("darkmode: " + darkTheme);
+    console.log("backcolour: " + currentTheme.backgroundColor);
   };
-
-  const ThemeContext = createContext<theme>(currentTheme);
 
   return (
     <div className="section">
